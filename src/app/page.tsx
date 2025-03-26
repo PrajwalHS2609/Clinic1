@@ -1,4 +1,5 @@
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
+import HomeCall from "@/components/HomePage/HomeCall/HomeCall";
 import HomeChildCare from "@/components/HomePage/HomeChildCare/HomeChildCare";
 import HomeDoctors from "@/components/HomePage/HomeDoctors/HomeDoctors";
 import HomeHeader from "@/components/HomePage/HomeHeader/HomeHeader";
@@ -11,7 +12,7 @@ export default function HomePage() {
       <HomeHeader />
       <HomeAboutUs />
       <HomeService />
-      {/* <HomeCall /> */}
+      <HomeCall />
       <HomeChildCare />
       <HomeDoctors />
 

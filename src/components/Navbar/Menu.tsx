@@ -20,8 +20,8 @@ export default function Menu() {
   const [drop, setDrop] = useState(false);
 
   const dropRef = useRef<HTMLDivElement | null>(null);
-  const dropRef2 = useRef<HTMLDivElement | null>(null);
-  const subDropRef = useRef<HTMLDivElement | null>(null);
+  // const dropRef2 = useRef<HTMLDivElement | null>(null);
+  // const subDropRef = useRef<HTMLDivElement | null>(null);
 
   const showSideBar = () => {
     const exit = document.querySelector(".exit") as HTMLElement;
@@ -68,58 +68,58 @@ export default function Menu() {
     }
   };
 
-  const handleConsultDrop = () => {
-    const arrow = document.querySelector(
-      ".menuDrop-arrowIco"
-    ) as HTMLElement | null;
+  // const handleConsultDrop = () => {
+  //   const arrow = document.querySelector(
+  //     ".menuDrop-arrowIco"
+  //   ) as HTMLElement | null;
 
-    // Ensure dropRef.current is not null
-    if (dropRef2.current) {
-      if (!drop) {
-        setDrop(true);
-        dropRef2.current.style.display = "flex"; // Safe to access
+  //   // Ensure dropRef.current is not null
+  //   if (dropRef2.current) {
+  //     if (!drop) {
+  //       setDrop(true);
+  //       dropRef2.current.style.display = "flex"; // Safe to access
 
-        if (arrow) {
-          arrow.style.transform = "rotate(45deg)";
-        }
-      } else {
-        setDrop(false);
-        dropRef2.current.style.display = "none"; // Safe to access
+  //       if (arrow) {
+  //         arrow.style.transform = "rotate(45deg)";
+  //       }
+  //     } else {
+  //       setDrop(false);
+  //       dropRef2.current.style.display = "none"; // Safe to access
 
-        if (arrow) {
-          arrow.style.transform = "rotate(0)";
-        }
-      }
-    } else {
-      console.error("dropRef is null or not attached to an element");
-    }
-  };
+  //       if (arrow) {
+  //         arrow.style.transform = "rotate(0)";
+  //       }
+  //     }
+  //   } else {
+  //     console.error("dropRef is null or not attached to an element");
+  //   }
+  // };
 
-  const handleDrop2 = () => {
-    const arrow = document.querySelector(
-      ".menuDrop-arrowIco"
-    ) as HTMLElement | null;
+  // const handleDrop2 = () => {
+  //   const arrow = document.querySelector(
+  //     ".menuDrop-arrowIco"
+  //   ) as HTMLElement | null;
 
-    // Ensure subDropRef.current is not null
-    if (subDropRef.current) {
-      if (!drop) {
-        setDrop(true);
-        // Change display style
-        subDropRef.current.style.display = "none";
-        console.log("up");
-        // Optionally manipulate the arrow
-        if (arrow) arrow.classList.add("rotate"); // Example of adding a class to the arrow
-      } else {
-        setDrop(false);
-        subDropRef.current.style.display = "flex";
-        console.log("down");
-        // Optionally manipulate the arrow
-        if (arrow) arrow.classList.remove("rotate"); // Example of removing a class
-      }
-    } else {
-      console.error("subDropRef is null or not attached to an element");
-    }
-  };
+  //   // Ensure subDropRef.current is not null
+  //   if (subDropRef.current) {
+  //     if (!drop) {
+  //       setDrop(true);
+  //       // Change display style
+  //       subDropRef.current.style.display = "none";
+  //       console.log("up");
+  //       // Optionally manipulate the arrow
+  //       if (arrow) arrow.classList.add("rotate"); // Example of adding a class to the arrow
+  //     } else {
+  //       setDrop(false);
+  //       subDropRef.current.style.display = "flex";
+  //       console.log("down");
+  //       // Optionally manipulate the arrow
+  //       if (arrow) arrow.classList.remove("rotate"); // Example of removing a class
+  //     }
+  //   } else {
+  //     console.error("subDropRef is null or not attached to an element");
+  //   }
+  // };
   return (
     <nav className="menu-container">
       <div className="menu-content1">
@@ -148,7 +148,7 @@ export default function Menu() {
                 <Link href="/doppler-scan-in-bangalore">Gastroenterology</Link>
                 {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
               </li>
-              <li >
+              <li>
                 <Link href="/cardiology-test-in-bangalore">Pediatrics</Link>
                 {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" />
                 <div className="subMenu-drop">
@@ -258,10 +258,10 @@ export default function Menu() {
                 <ul>
                   <li>
                     <Link
-                      href="/pathology-test-in-bangalore"
+                      href="/cardiology-test-in-bangalore"
                       onClick={hideSideBar}
                     >
-                      Pathology
+                      Cardiology
                     </Link>
                   </li>
                   <li>
@@ -269,7 +269,7 @@ export default function Menu() {
                       href="/ultrasound-scan-in-bangalore"
                       onClick={hideSideBar}
                     >
-                      UltraSound
+                      Pulmonology
                     </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
@@ -278,14 +278,13 @@ export default function Menu() {
                       href="/doppler-scan-in-bangalore"
                       onClick={hideSideBar}
                     >
-                      Doppler Scan
+                      Neurology
                     </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
                   <li>
                     <Link href="/x-ray-test-in-bangalore" onClick={hideSideBar}>
-                      X-Ray
-                    </Link>
+                    Gastroenterology                    </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
                   <li id="resp-cardiology">
@@ -294,14 +293,14 @@ export default function Menu() {
                         href="/cardiology-test-in-bangalore"
                         onClick={hideSideBar}
                       >
-                        Cardiology
+                        Pediatrics
                       </Link>
-                      <IoIosArrowDown
+                      {/* <IoIosArrowDown
                         className="menuDrop-arrowIco"
                         onClick={handleDrop2}
-                      />
+                      /> */}
                     </span>
-                    <div className="resp-subMenu" ref={subDropRef}>
+                    {/* <div className="resp-subMenu" ref={subDropRef}>
                       <ul>
                         <li>
                           <Link
@@ -328,27 +327,26 @@ export default function Menu() {
                           </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/radiological-procedures-in-bangalore"
                       onClick={hideSideBar}
                     >
                       Radiological Procedures
                     </Link>
-                    {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </li>
-            <li>
+            {/* <li>
               {" "}
               <Link href="/health-packages-in-bangalore" onClick={hideSideBar}>
                 Health Packages
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <div className="respMenuList">
                 <Link href="/">Consultation</Link>
                 <span>
@@ -418,7 +416,7 @@ export default function Menu() {
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> */}
             <li>
               {" "}
               <Link href="/about-us" onClick={hideSideBar}>

@@ -55,3 +55,25 @@
   color: white;
   font-weight: 500;
 }
+@media screen and (min-width:320px) and (max-width:768px){
+  .aboutXp-container {
+    /* border: solid green; */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+  .aboutXp-container > img {
+    position: absolute;
+    z-index:0;
+
+  }
+  .aboutXp-content {
+    /* border: solid red; */
+    position: static;
+
+  }
+  .aboutXp-content > ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+}

@@ -53,6 +53,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 .aboutUsCareCard-content {
@@ -80,4 +81,10 @@
 
 .aboutUsCareCard-content>p{
     text-align: justify;
+}
+@media screen and (min-width:320px) and (max-width:768px){
+  .aboutUsCareHead-container > p {
+    text-align: center;
+    width: 100%;
+  }
 }
