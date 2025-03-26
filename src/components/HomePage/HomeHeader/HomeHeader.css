@@ -1,0 +1,93 @@
+.homeHeader-container {
+  /* border: solid red; */
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+.homeHeader-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.homeHeader-item {
+  /* border: solid black; */
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  padding: 30px;
+}
+.homeHeader-item > p {
+  text-align: center;
+  font-weight: 500;
+}
+.homeHeader-item > h2 {
+  font-size: 55px;
+  font-weight: bold;
+  color: var(--customColor2);
+  text-align: center;
+}
+.homeHeader-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.homeHeader-button > button:nth-child(1) {
+  background-color: var(--customColor1);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: var(--customColor3);
+  }
+}
+.homeHeader-button > button:nth-child(2) {
+  color: var(--customColor2);
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  &:hover {
+    color: var(--customColor3);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .homeHeader-container {
+    /* border: solid red; */
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .homeHeader-item {
+    /* border: solid black; */
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    position: static;
+    left: 0px;
+    top: 0;
+  }
+  .homeHeader-button {
+    flex-direction: column;
+    gap: 10px;
+  }.homeHeader-item > h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--customColor2);
+    text-align: center;
+  }
+}
