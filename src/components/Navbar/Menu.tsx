@@ -127,7 +127,7 @@ export default function Menu() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/services">Services</Link>
+          <Link href="">Services</Link>
           <FaPlus className="menu-arrowIco" />
           <div className="menuDrop-container">
             <ul>
