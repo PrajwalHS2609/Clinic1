@@ -215,9 +215,9 @@ export default function Menu() {
             </ul>
           </div> */}
         </li>
-        {/* <li>
-          <Link href="/health-packages-in-bangalore">Health Packages</Link>
-        </li> */}
+        <li>
+          <Link href="/departments">Departments</Link>
+        </li>
         <li>
           <Link href="/about-us">About Us</Link>
         </li>
@@ -284,7 +284,8 @@ export default function Menu() {
                   </li>
                   <li>
                     <Link href="/x-ray-test-in-bangalore" onClick={hideSideBar}>
-                    Gastroenterology                    </Link>
+                      Gastroenterology{" "}
+                    </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
                   <li id="resp-cardiology">

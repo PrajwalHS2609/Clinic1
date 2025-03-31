@@ -1,0 +1,74 @@
+.departmentsCard-container {
+  /* border: solid green; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+.departmentsCard-content {
+  border: solid var(--bg);
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 50px;
+  gap: 20px;
+  border-radius: 20px;
+  background-color: var(--bg);
+  transition: 300ms ease;
+}
+.departmentsCard-item {
+  border: 2px solid var(--customColor4);
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: var(--customColor2);
+  position: absolute;
+  padding: 15px;
+  top: -50px;
+}
+.departmentsCard-content:hover {
+  transform: translateY(-20px);
+  border: solid var(--customColor2);
+  background-color: white;
+}
+.departmentsCard-content > p {
+  font-size: 18px;
+  text-align: justify;
+  margin: 0;
+}
+.departmentsCard-content > a {
+  color: var(--customColor4);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media  screen and (min-width: 320px) and (max-width: 768px) {
+    .departmentsCard-container {
+        /* border: solid green; */
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        padding: 10px;
+      }
+    .departmentsCard-content {
+        border: solid var(--bg);
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    
+      }
+      .departmentsCard-item {
+        position: static;
+
+      }
+}
