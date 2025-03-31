@@ -8,7 +8,7 @@
   flex-direction: column;
   padding: 30px;
   gap: 20px;
-  background-color: white;
+  background-color: var(--bg);
 }
 .footerTop-container {
   /* border: solid blue; */
@@ -120,7 +120,7 @@
   gap: 20px;
   width: 200px;
 }
-.footerSocial-container>h4{
+.footerSocial-container > h4 {
   color: var(--customColor2);
 }
 .footerSocial-container > ul {

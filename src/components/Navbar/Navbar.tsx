@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="navbar-item">
           <div className="navbar-itemContent">
             <FaLocationDot className="navbar-icon" />
-            <a href=""> HAL 2nd Stage, Indiranagar, Bengaluru</a>
+            <a href="">Bangalore, Karnataka</a>
           </div>
           <div className="navbar-itemContent">
             <FaPhoneAlt className="navbar-icon" />{" "}
